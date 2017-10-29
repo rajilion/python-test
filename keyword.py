@@ -1,5 +1,9 @@
+import unittest
 
-my_list = ['p','r','o','b','e']
+class SimplisticTest(unittest.TestCase):
 
-# Output: e
-print(my_list[-1:])
+    def test(self):
+        self.assertTrue(True)
+
+if __name__ == '__main__':
+    unittest.main()
