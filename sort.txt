@@ -1,0 +1,26 @@
+import java.util.*;
+class Main {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter Input");
+    String input = sc.nextLine();
+    String splitWords[]=input.split("\\s");  
+    String reverseWord="";  
+    for(String w:splitWords){  
+        StringBuilder sb=new StringBuilder(w);  
+        sb.reverse();
+        String word = sb.toString();
+        word = word.substring(0,1).toUpperCase() + word.substring(1).toLowerCase();
+        reverseWord+=word+" ";  
+    }
+    System.out.println(reverseWord);
+    splitWords = reverseWord.split("\\s");
+    Arrays.sort(splitWords);
+    String output = "";
+    for (int i=0; i<splitWords.length; i++){
+      output += splitWords[i] + " ";
+    }
+    output = output.trim();
+    System.out.println(output);
+  }
+}
